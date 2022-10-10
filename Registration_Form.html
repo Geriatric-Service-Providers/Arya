@@ -1,0 +1,148 @@
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <style>  
+    body{  
+      font-family: Calibri, Helvetica, sans-serif;  
+      background-color: lightblue;  
+      padding: 100px;  
+    }  
+    .container {  
+        padding: 65px;  
+      background-color: lightblue;  
+    }  
+      
+    input[type=text], input[type=password], textarea {  
+      width: 100%;  
+      padding: 15px;  
+      margin: 5px 0 22px 0;  
+      display: inline-block;  
+      border: none;  
+      background: #f1f1f1;  
+    }  
+    input[type=text]:focus, input[type=password]:focus {  
+      background-color: orange;  
+      outline: none;  
+    }  
+     div {  
+                padding: 10px 0;  
+             }  
+    hr {  
+      border: 1px solid #f1f1f1;  
+      margin-bottom: 25px;  
+    }  
+    .registerbtn {  
+      background-color: #4CAF50;  
+      color: white;  
+      padding: 16px 10px;  
+      margin: 18px 0;  
+      border: none;  
+      cursor: pointer;  
+      width: 10%; 
+      float: right; 
+      opacity: 0.9;  
+    }  
+    .registerbtn:hover {  
+      opacity: 1;  
+    }  
+    </style>  
+    </head>  
+    <body>  
+    <form>  
+      <div class="container">  
+      <center>  <h1>Registeration Form</h1> </center>  
+      <hr>  
+      <label> Firstname </label>   
+    <input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
+    <!-- <label> Middlename: </label>   
+    <input type="text" name="middlename" placeholder="Middlename" size="15" required />    -->
+    <label> Lastname: </label>    
+    <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+    </div>
+    <label>   
+    Services :  
+    </label>   
+      
+    <select>  
+    <option value="Services">Services</option>  
+    <option value="Hospice Care at Home">Hospice Care at Home</option>  
+    <option value="Hospice Interdisciplinary Care Team">Hospice Interdisciplinary Care Team </option>  
+    <option value="Vitals Examination">Vitals Examination</option>  
+    <option value="Wound Cleaning">Wound Cleaning</option>  
+    <option value="Inpatient Hospice Care">Inpatient Hospice Care </option>  
+    <option value="Emotional and Spiritual Care">Emotional and Spiritual Care</option>  
+    </select>  
+    </div>  
+    <br>
+    <br>
+    <br>
+    <!-- <div>  
+    <label>   
+    Gender :  
+    </label><br>  
+    <input type="radio" value="Male" name="gender" checked > Male   
+    <input type="radio" value="Female" name="gender"> Female   
+    <input type="radio" value="Other" name="gender"> Other  
+      
+    </div>   -->
+    <label>   
+    Number Of Members:  
+    </label>   
+          
+    <select>  
+    <option value="Number Of Members">Number Of Members</option>  
+    <option value="1">1</option>  
+    <option value="2">2</option>  
+    <option value="3">3</option>  
+    <option value="4">4</option>  
+    <option value="5">5</option>  
+    <option value="6">6</option> 
+    <option value="7">7</option>  
+    <option value="8">8</option> 
+    </select>  
+    </div>  
+    <br><br>
+    <label>   
+    Phone :  
+    </label>  
+    <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
+    <input type="text" name="phone" placeholder="phone no." size="10"/ required>   
+    Qualification Of Members :  
+    <textarea cols="80" rows="5" placeholder=" Enter the Qualification" value="Qualification" required>  
+    </textarea> 
+    Current Address :  
+    <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+    </textarea> 
+    <label>   
+        Availabile Time:  
+        </label>   
+              
+        <select>  
+        <option value="Availabile Time">Availabile Time</option>  
+        <option value="5-6">5-6</option>  
+        <option value="6-8">6-8</option>  
+        <option value="6-6">6-6</option>  
+        <option value="7-8">7-8</option>  
+        <option value="8-8">8-8</option>  
+        <option value="9-9">9-9</option> 
+        <option value="10-4">10-4</option>  
+        <option value="Full Time">Full Time</option> 
+        </select>  
+        </div> 
+        <br>
+        <br> 
+    
+    <label for="email"><b>Email</b></label>  
+    <input type="text" placeholder="Enter Email" name="email" required>  
+      
+    <label for="psw"><b>Password</b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" required>  
+      
+    <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <button type="submit" class="registerbtn">Register</button>    
+    
+    </form>  
+    </body>  
+    </html>  

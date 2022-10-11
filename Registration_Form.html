@@ -46,7 +46,39 @@
     .registerbtn:hover {  
       opacity: 1;  
     }  
-    </style>  
+    </style> 
+    <script>
+            function validate(){
+               var passwordd=document.getElementById('password').value ;
+               var usernamee=document.getElementById('username').value;
+               var phonee=document.getElementById('phn').value;
+               if(usernamee=="")
+               {
+                   alert("Fill the Username");
+               }
+               else if(usernamee.length<8)
+               {
+                   alert("Enter username with more than 8 characters");
+               }
+               if(phonee=="")
+               {
+                   alert("Fill the Phone number");
+               }
+               else if(phonee.length<10)
+               {
+                   alert("Enter valid phone number");
+               }
+               if(passwordd=="")
+               {
+                   alert("fill password");
+               }
+               else if(passwordd.length<6)
+               {
+                   alert("enter a valid password");
+               }
+
+            }
+    </script>
     </head>  
     <body>  
     <form>  
@@ -54,7 +86,7 @@
       <center>  <h1>Registeration Form</h1> </center>  
       <hr>  
       <label> Username </label>   
-    <input type="text" name="firstname" placeholder= "Username" size="15" required />   
+    <input type="text" name="firstname" placeholder= "Username" id="username" size="15" required />   
     <!-- <label> Middlename: </label>   
     <input type="text" name="middlename" placeholder="Middlename" size="15" required />    -->
 <!--     <label> Lastname: </label>    
@@ -107,7 +139,7 @@
     Phone :  
     </label>  
     <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
-    <input type="text" name="phone" placeholder="phone no." size="10"/ required>   
+    <input type="text" name="phone" placeholder="phone no." id="phn" size="10"/ required>   
     Qualification Of Members :  
     <textarea cols="80" rows="5" placeholder=" Enter the Qualification" value="Qualification" required>  
     </textarea> 
@@ -137,10 +169,10 @@
     <input type="text" placeholder="Enter Email" name="email" required>  
       
     <label for="psw"><b>Password</b></label>  
-    <input type="password" placeholder="Enter Password" name="psw" required>  
+    <input type="password" placeholder="Enter Password id="password" name="psw" required>  
       
     <label for="psw-repeat"><b>Re-type Password</b></label>  
-    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <input type="password" placeholder="Retype Password" id="password" name="psw-repeat" required>  
     <button type="submit" class="registerbtn">Register</button>    
     
     </form>  

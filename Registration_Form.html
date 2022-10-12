@@ -1,4 +1,4 @@
-   <!DOCTYPE html>  
+      <!DOCTYPE html>  
     <html>  
     <head>  
     <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -6,16 +6,19 @@
     body{  
       font-family: Calibri, Helvetica, sans-serif;  
       background-color: lightblue;  
-      padding: 100px;  
+      padding: 100px; 
       background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("palliative-care-scaled.webp");
     
     background-size:cover;
-    background-position: cover;  
+    background-position: cover;
+    /* padding: 470px 470px;
+    /* height: 600px; width: 1280px; height: 100px; */
+    
     }  
-    /* .container {  
+    .container {  
         padding: 65px;  
-      background-color:  rgb(175, 234, 155);  
-    }   */
+      background-color: rgb(175, 234, 155);  
+    }  
       
     input[type=text], input[type=password], textarea {  
       width: 100%;  
@@ -36,7 +39,18 @@
       border: 1px solid #f1f1f1;  
       margin-bottom: 25px;  
     }  
-    .registerbtn { 
+    .addbtn{
+        background-color: #4CAF50;  
+      color: white;  
+      padding: 16px 10px;  
+      margin: 18px 0;  
+      border: none;  
+      cursor: pointer;  
+      width: 10%; 
+      float: left; 
+      opacity: 0.9;  
+    }
+    .registerbtn {  
       background-color: #4CAF50;  
       color: white;  
       padding: 16px 10px;  
@@ -52,63 +66,69 @@
     }  
     </style> 
     <script>
-            function validate(){
-               var passwordd=document.getElementById('password').value ;
-               var usernamee=document.getElementById('username').value;
-               var phonee=document.getElementById('phn').value;
-               if(usernamee=="")
-               {
-                   alert("Fill the Username");
-               }
-               else if(usernamee.length<8)
-               {
-                   alert("Enter username with more than 8 characters");
-               }
-               if(phonee=="")
-               {
-                   alert("Fill the Phone number");
-               }
-               else if(phonee.length<10)
-               {
-                   alert("Enter valid phone number");
-               }
-               if(passwordd=="")
-               {
-                   alert("fill password");
-               }
-               else if(passwordd.length<6)
-               {
-                   alert("enter a valid password");
-               }
+      function validate(){
+         var passwordd=document.getElementById('password').value ;
+         var usernamee=document.getElementById('username').value;
+         var phonee=document.getElementById('phn').value;
+         if(usernamee=="")
+         {
+             alert("Fill the Username");
+         }
+         else if(usernamee.length<8)
+         {
+             alert("Enter username with more than 8 characters");
+         }
+         if(phonee=="")
+         {
+             alert("Fill the Phone number");
+         }
+         else if(phonee.length<10)
+         {
+             alert("Enter valid phone number");
+         }
+         if(passwordd=="")
+         {
+             alert("fill password");
+         }
+         else if(passwordd.length<6)
+         {
+             alert("enter a valid password");
+         }
 
-            }
-     </script>
-     </head>  
+      }
+  </script> 
+    </head>  
     <body>  
     <form>  
       <div class="container">  
       <center>  <h1>Registeration Form</h1> </center>  
       <hr>  
-      <label> <b>Username:</b> </label>   
+      <label> Username </label>   
     <input type="text" name="firstname" placeholder= "Username" id="username" size="15" required />   
     <!-- <label> Middlename: </label>   
     <input type="text" name="middlename" placeholder="Middlename" size="15" required />    -->
-<!--     <label> Lastname: </label>    
+    <!-- <label> Lastname: </label>    
     <input type="text" name="lastname" placeholder="Lastname" size="15"required />    -->
     </div>
     <label>   
-    <b>Services : </b> 
+    Services: 
     </label>   
-      
-    <select>  
-    <option value="Services">Services</option>  
+    
+    
+    <!-- <option value="Services">Services</option>  
     <option value="Hospice Care at Home">Hospice Care at Home</option>  
     <option value="Hospice Interdisciplinary Care Team">Hospice Interdisciplinary Care Team </option>  
     <option value="Vitals Examination">Vitals Examination</option>  
     <option value="Wound Cleaning">Wound Cleaning</option>  
     <option value="Inpatient Hospice Care">Inpatient Hospice Care </option>  
-    <option value="Emotional and Spiritual Care">Emotional and Spiritual Care</option>  
-    </select>  
+    <option value="Emotional and Spiritual Care">Emotional and Spiritual Care</option>   -->
+    <label>Hospice Care at Home </label><input type="checkbox" id="s1" name="Hospice Care at Home" value="Services">
+    <label>Hospice Interdisciplinary Care Team</label><input type="checkbox" id="s2" name="Hospice Interdisciplinary Care Team" value="Services">
+    <label>Vitals Examination</label><input type="checkbox" id="s3" name="Vitals Examination" value="Services">
+    <label>Inpatient Hospice Care</label><input type="checkbox" id="s4" name="Inpatient Hospice Care" value="Services">
+    <label>Emotional and Spiritual Care</label><input type="checkbox" id="s5" name="Emotional and Spiritual Care" value="Services">
+    
+   
     </div>  
     <br>
     <br>
@@ -123,7 +143,7 @@
       
     </div>   -->
     <label>   
-    <b>Number Of Members: </b> 
+    Number Of Members:  
     </label>   
           
     <select>  
@@ -140,18 +160,19 @@
     </div>  
     <br><br>
     <label>   
-    <b>Phone :  </b>
+    Phone :  
     </label>  
     <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
-    <input type="text" name="phone" placeholder="phone no." id="phn" size="10" required>   
-    <b>Qualification Of Members : </b> 
-    <textarea cols="80" rows="5" placeholder=" Enter the Qualification" value="Qualification" required>  
-    </textarea> 
-    <b>Current Address :  </b>
+    <input type="text" name="phone" placeholder="phone no."id="phn" size="10" required>   
+    <label>Name of the Member:</label><input type="text" name="Name of the Member" placeholder="Please enter your name" id="name"  required>   
+    <label>Qualification:</label><input type="text" name="Qualification" placeholder="Please enter your qualification"id="qualification" size="10" required>   
+    <label>Skills:</label><input type="text" name="Skill" placeholder="Please enter your skill" id="phn" size="10" required>   
+    <label>Personal Phone numbe:</label><input type="text" name="Personal Phone number" placeholder="Personal Phone number"id="phn" size="10" required>   
+    Current Address :  
     <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
     </textarea> 
     <label>   
-       <b> Availabile Time:  </b>
+        Availabile Time:  
         </label>   
               
         <select>  
@@ -173,11 +194,12 @@
     <input type="text" placeholder="Enter Email" name="email" required>  
       
     <label for="psw"><b>Password</b></label>  
-    <input type="password" placeholder="Enter Password" id="password" name="psw" required>  
+    <input type="password" placeholder="Enter Password"id="password" name="psw" required>  
       
     <label for="psw-repeat"><b>Re-type Password</b></label>  
-    <input type="password" placeholder="Retype Password" id="password" name="psw-repeat" required>  
-    <button type="submit" class="registerbtn">Register</button>    
+    <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+    <button type="submit" class="addbtn">ADD MEMBER</button>
+    <button type="submit" class="registerbtn">REGISTER</button>    
     
     </form>  
     </body>  

@@ -151,6 +151,43 @@
             background: #f2f2f2;
         } */
     </style>
+    <script>
+//         function fun()
+// {
+// 		document.write("<input type='text' name='text' class='member'> <button type='button' onclick='fun()' > ADD </button>");
+// }
+        function validate(){
+           var passwordd=document.getElementById('password').value ;
+           var organization_name=document.getElementById('org_name').value;
+           var fullname=document.getElementById('full_name').value;
+           var phonee=document.getElementById('phn').value;
+           if(organization_name=="")
+           {
+               alert("Fill the Organization name");
+           }
+           if(fullname=="")
+           {
+               alert("Fill the Organization name");
+           }
+           if(phonee=="")
+           {
+               alert("Fill the Phone number");
+           }
+           else if(phonee.length<10)
+           {
+               alert("Enter valid phone number");
+           }
+           if(passwordd=="")
+           {
+               alert("fill password");
+           }
+           else if(passwordd.length<6)
+           {
+               alert("enter a valid password");
+           }
+  
+        }
+    </script> 
 </head>
     <body>
         <div class="container">
@@ -162,15 +199,15 @@
                         <div class="fields">
                             <div class="input-field">
                                 <label>Organization Name</label>
-                                <input type="text" placeholder="Organization name" required>
+                                <input type="text" id="orga_name" placeholder="Organization name" required>
                             </div>
                             <div class="input-field">
                                 <label>Email</label>
-                                <input type="text" placeholder="Email" required>
+                                <input type="text" id="emaail" placeholder="Email" required>
                             </div>
                             <div class="input-field">
                                 <label>Phone Number</label>
-                                <input type="text" placeholder="Phone Number" required>
+                                <input type="text" id="phn" placeholder="Phone Number" required>
                             </div>
                         <!-- </div>
                         <label> Services</label>  
@@ -186,7 +223,7 @@
                                 <label>   
                                     Number Of Members  
                                     </label>   
-                                    <input type="text" placeholder="Number Of Members" required>    
+                                    <input type="text" id="no_of_mem" placeholder="Number Of Members" required>    
                                     <!-- <select>  
                                     <option value="Number Of Members">Number Of Members</option>  
                                     <option value="1">1</option>  
@@ -201,25 +238,37 @@
                                     </div>  
                                     <div class="input-field">
                                         <label>Services</label>
-                                        <input type="text" placeholder="Services" required>
+                                        <input type="text"  placeholder="Services" required>
                                     </div>
                                     <div class="input-field">
                                         <label>Address</label>
                                         <input type="text" placeholder="Address" required>
                                     </div>
+                                    <div class="input-field">
+                                        <label>City</label>
+                                        <input type="text" placeholder="City" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label>District</label>
+                                        <input type="text" placeholder="District" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Password</label>
+                                        <input type="password" id="password" placeholder="Password Eg:Aabb@123" required>
+                                    </div>
                             </div>
                         </div>
                     </div><br>
-                    <div class="Personal">
+                    <div class="member">
                         <span class="title"><b>Members Details</b></span>
                         <div class="fields">
                             <div class="input-field">
                                 <label> Full Name</label>
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" id="full_name" placeholder="Name" required>
                             </div>
                             <div class="input-field">
                                 <label>Email</label>
-                                <input type="text" placeholder="Email" required>
+                                <input type="text" id="email" placeholder="Email" required>
                             </div>
                             <div class="input-field">
                                 <label>Qualification</label>
@@ -227,7 +276,7 @@
                             </div>
                             <div class="input-field">
                                 <label>Skills</label>
-                                <input type="text" name="Skills" placeholder="Skills"id="qualification" size="10" required>
+                                <input type="text" name="Skills" placeholder="Skills" id="qualification" size="10" required>
                             </div>
                             <div class="input-field">
                                 <label>Available Time</label>
@@ -258,25 +307,29 @@
                             </div> -->
                             <div class="input-field">
                                 <label>Phone Number</label>
-                                <input type="text" placeholder="Phone Number" required>
+                                <input type="text" id="phn" placeholder="Phone Number" required>
                             </div>
                             <div class="input-field">
                                 <label>Address</label>
                                 <input type="text" placeholder="Current Address" required>
                             </div>
-                            <div class="input-field">
-                                <label>Password</label>
-                                <input type="password" placeholder="Password Eg:Aabb@123" required>
-                            </div>
+                            
                             <!-- <div class="input-field">
                                 <button type="submit" class="addbtn">ADD </button>   
                             </div> -->
                         </div>
                     </div>
-                    <div class="input-field">
-                        <button type="submit" class="addbtn">ADD </button>
-                        <button type="submit" class="registerbtn">REGISTER</button>
-                    </div>
+                    <!-- <div class="input-field"> -->
+                        <div>
+                        <button type="submit" class="addbtn" onclick="fun()">ADD </button>
+                        <button type="submit" class="registerbtn"  >REGISTER</button>
+                   
+                    <!-- <button class="nextbutton">
+                        <span class="btnText">Next</span>
+                        <i class="uli uli navigator"></i>
+                    </button> -->
+                </div>
+                </div>
                 </div>
             </form>
         </div>
